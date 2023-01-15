@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS APP</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="crud">
+
+        <div class="head-title">
+            <h2>CRUDS - APP</h2>
+            <P>Product Management System</P>
+            <h1 class="alert" id="alert">You Should Fill Correct Data <br/> and count less than 100 !!..</h1>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div class="price-section">
+                <input onkeyup="getTotalPrice()" type="number"  id="price" placeholder="Price">
+                <input onkeyup="getTotalPrice()" type="number"  id="taxes" placeholder="Taxes">
+                <input onkeyup="getTotalPrice()" type="number"  id="ads" placeholder="Ads">
+                <input onkeyup="getTotalPrice()" type="number"  id="discount" placeholder="Discount">
+                <div id="total" class="total"></div>
+            </div>
+            <input type="number" id="count" placeholder="Count">
+            <input type="text" id="category" placeholder="category">
+            <button id="sumbit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="search">
+                <input type="text" onkeyup="searchData(this.value)" id="search" placeholder="Search">
+                <div class="btn-search">
+                    <button onclick="getSearchMood(this.id)" class="searchTitle" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" class="searchCategory" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+
+            <div id="deleteAll" class="deleteAll"></div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>iD</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody id="tbody">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Samsung</td>
+                            <td>2000</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>2400</td>
+                            <td>Phone</td>
+                            <td><button class="update" id="update">Update</button></td>
+                            <td><button class="delete" id="delete">Delete</button></td>
+                        </tr>    -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
